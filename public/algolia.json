@@ -1,0 +1,7 @@
+[
+  {
+    "objectID": "-62135596800",
+    "permalink": "/post/javascript6/",
+    "title": "JacaScript-高级引用类型","content": "\r目录\r6.1 Object 6.2 Array 6.3 定型数组 6.4 Map 6.5 Set 6.6 弱引用 6.7 WeakMap/WeakSet Object\r创建方式：\rnew Object() let obj={ }\n赋值方式：\r存取方式：\r点语法obj.属性 中括号obj[属性] Array\r创建方式：\rnew Array() Array() let arr=[ ]\nArray.from()\r将类数组结构转换为数组示例\nArray.from(\u0026amp;#34;Matt\u0026amp;#34;) //[\u0026amp;#34;M\u0026amp;#34;,\u0026amp;#34;a\u0026amp;#34;,\u0026amp;#34;t\u0026amp;#34;,\u0026amp;#34;t\u0026amp;#34;] Array.of()\r将一组参数转换为数组实例\n数组空位：\r使用数组字面量初始化数组时，可以使用一串逗号创建空位 const a = [1,,,,,5]; map()会跳过空位置 join()会视空位置为空字符串 数组索引：\r用数组索引更新数组时，中间跳过的部分会为 undefined let a = [1]; a[100]=1; //索引1到99的部分为undefined 检测数组：\r假定只有一个全局执行上下文：instanceof() 如果要把数组从一个框架传给另外一个框架，则这个数组的构造函数将有别于在第二个框架内本地创建的数组：Array.isArray() 迭代器方法：\rkeys()：返回数组索引 values()：返回数组元素 entires()：返回索引/值对 复制和填充方法：\rfill() 向一个已有的数组中插入全部或部分相同的值 参数：填入数字（必填）、开始索引（可选）、结束索引（可选） 索引为负数也就是想象成数组产固定加上它得到的正索引 静默沪铝超出数组边界、0 长度、方向相仿的索引范围 copyWithin() 按照指定范围复制数组中的部分内容，然后将它插入到指定索引开始的位置 参数：插入开始位置、开始复制位置、结束复制位置（没有则到末尾） 索引问题同fill() 扩展操作符：\r...\n将两个或多个数组合并[...array1,...array2] 创建数组浅拷贝let copyarr = [...originalArray] 剩余操作符：\r主要用于函数参数或解构赋值 转换方法：\rtoLocalString() toString()：返回数组中每一个值的等效 …","date": "0001-01-01 00:00:00",
+    "updated": "0001-01-01 00:00:00"
+  }]

@@ -31,13 +31,13 @@ email: 1689785565@qq.com
 description: "少女祈祷中..."
 subtitle: "少女祈祷中..."
 
-banner: "images/banner.webp"
+banner: "/imgs/bizhi.jpg"
 # You can also write it in the form of the following url
 # banner: "https://example.com"
 
 # If you want to use the srcset attribute, please enable it
 banner_srcset:
-  enable: false
+  enable: true
   srcset:
     - src: "images/banner-600w.webp"
       media: "(max-width: 479px)"
@@ -68,6 +68,9 @@ open_graph:
     #google_plus: <g+:profile_link>
     #fb_admins: <fb:admin_id>
     #fb_app_id: <fb:app_id>
+    qq_card: "summary_large_image"
+    qq_id: "@linrunxinnn"
+    twitter_image: "/imgs/bizhi.jpg"
 
 # Content
 excerpt_link: Read More
@@ -94,8 +97,8 @@ copyright:
 #   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></div>
 
 footer:
-  since: 2020 # 2020-current year
-  powered: true
+  since: 2025 # 2020-current year
+  powered: false
   count: true
   busuanzi: true
   icon:
@@ -104,11 +107,11 @@ footer:
     mask: true # whether to use the images as a mask
 
 # Sidebar
-sidebar: right
+sidebar: left
 
 social:
-  # email: mailto:xxx@gmail.com
-  # github: https://github.com/yourname
+  email: mailto:lrxczy03140125@gmail.com
+  github: https://github.com/linrunxinnn
   # google: https://plus.google.com/yourname
   # twitter: https://twitter.com/yourname
   # facebook: https://www.facebook.com/yourname
@@ -120,7 +123,7 @@ social:
   # flickr: https://www.flickr.com/photos/yourname
   # dribbble: https://dribbble.com/yourname
   # behance: https://www.behance.net/yourname
-  # bilibili: https://space.bilibili.com/yourname
+  # bilibili: https://space.bilibili.com/1313516083?spm_id_from=333.1007.0.0
   # weibo: https://weibo.com/yourname
   # zhihu: https://www.zhihu.com/people/yourname
   # reddit: https://www.reddit.com/user/yourname
@@ -129,7 +132,7 @@ social:
   # deviantart: https://yourname.deviantart.com
   # stackoverflow: https://stackoverflow.com/users/yourname
   # keybase: https://keybase.io/yourname
-  # telegram: https://t.me/yourname
+  telegram: https://t.me/linrunxinnn
   # discord: https://discordapp.com/users/yourname
   # steam: https://steamcommunity.com/id/yourname
 
@@ -150,7 +153,7 @@ only_show_capsule_in_index: false # If you have hugo amounts of tags and categor
 
 # RSS output
 rss:
-  limit: 10 # The number of recent articles to be output, write -1 to output all
+  limit: -1 # The number of recent articles to be output, write -1 to output all
   showFullContent: false # output full content or description
   showCopyright: false # If true, add copyright to the end of article.
 
@@ -282,9 +285,9 @@ comment:
 # version 1.5.1
 # notify and verify have been deprecated
 valine:
-  enable: false # if you want to use valine,please set this value is true
-  appId: # leancloud application app id
-  appKey: # leancloud application app key
+  enable: true # if you want to use valine,please set this value is true
+  appId: BXwmMSk88WgSCeFADzy3tV3L-gzGzoHsz # leancloud application app id
+  appKey: OSAt0z0IkeHnxRtp55IqJ1HR # leancloud application app key
   pageSize: 10 # comment list page size
   avatar: mp # gravatar style https://valine.js.org/#/avatar
   # lang: zh-cn # deprecated, use html.lang instead
@@ -355,7 +358,7 @@ giscus:
 ########################################
 
 algolia_search:
-  enable: false
+  enable: true
   appID:
   apiKey:
   indexName:
@@ -482,7 +485,7 @@ outdate:
 
 # ICP 备案
 icp:
-  icpnumber: # ICP备案号
+  icpnumber: "粤ICP备2025379501号"
   beian: # 网安备案号
   recordcode: # 网安备案链接中的recordcode参数
 
@@ -511,12 +514,12 @@ share:
   # - linkedin
   # - reddit
   # - weibo
-  # - qq
-  # - weixin
+  - qq
+  - weixin
 
 # show categories card on home page
 home_categories:
-  enable: false
+  enable: true
   content:
     - categories: # string (single-layer category) or array (multi-layer category)
       cover: # empty means random cover

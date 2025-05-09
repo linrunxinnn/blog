@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>高级 on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/%E9%AB%98%E7%BA%A7/</link>
+    <description>Recent content from My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    
+    <managingEditor>1689785565@qq.com (linrunxinnn)</managingEditor>
+    <webMaster>1689785565@qq.com (linrunxinnn)</webMaster>
+    
+    <copyright>All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!</copyright>
+    
+    
+    <atom:link href="http://localhost:1313/tags/%E9%AB%98%E7%BA%A7/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>{{title}}</title>
+      <link>http://localhost:1313/post/time/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <author>1689785565@qq.com (linrunxinnn)</author>
+      <guid>http://localhost:1313/post/time/</guid>
+      <description>
+        <![CDATA[<h1>{{title}}</h1><p>Author: linrunxinnn(1689785565@qq.com)</p>
+        
+          <h2 id="目录">
+<a class="header-anchor" href="#%e7%9b%ae%e5%bd%95"></a>
+目录
+</h2><ul>
+<li>6.1 <strong>Object</strong></li>
+<li>6.2 <strong>Array</strong></li>
+<li>6.3 <strong>定型数组</strong></li>
+<li>6.4 <strong>Map</strong></li>
+<li>6.5 <strong>Set</strong></li>
+<li>6.6 <strong>弱引用</strong></li>
+<li>6.7 <strong>WeakMap/WeakSet</strong></li>
+</ul>
+<h2 id="object">
+<a class="header-anchor" href="#object"></a>
+Object
+</h2><h4 id="创建方式">
+<a class="header-anchor" href="#%e5%88%9b%e5%bb%ba%e6%96%b9%e5%bc%8f"></a>
+创建方式：
+</h4><p><code>new Object()</code>
+<code>let obj={ }</code></p>
+<h4 id="赋值方式">
+<a class="header-anchor" href="#%e8%b5%8b%e5%80%bc%e6%96%b9%e5%bc%8f"></a>
+赋值方式：
+</h4><h4 id="存取方式">
+<a class="header-anchor" href="#%e5%ad%98%e5%8f%96%e6%96%b9%e5%bc%8f"></a>
+存取方式：
+</h4><ul>
+<li>点语法<code>obj.属性</code></li>
+<li>中括号<code>obj[属性]</code></li>
+</ul>
+<h2 id="array">
+<a class="header-anchor" href="#array"></a>
+Array
+</h2><h4 id="创建方式-1">
+<a class="header-anchor" href="#%e5%88%9b%e5%bb%ba%e6%96%b9%e5%bc%8f-1"></a>
+创建方式：
+</h4><p><code>new Array()</code>
+<code>Array()</code>
+<code>let arr=[ ]</code></p>
+<h5 id="arrayfrom">
+<a class="header-anchor" href="#arrayfrom"></a>
+<code>Array.from()</code>
+</h5><p>将类数组结构转换为数组示例</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Array.from(&#34;Matt&#34;)
+</span></span><span class="line"><span class="cl">//[&#34;M&#34;,&#34;a&#34;,&#34;t&#34;,&#34;t&#34;]
+</span></span></code></pre></div><h5 id="arrayof">
+<a class="header-anchor" href="#arrayof"></a>
+<code>Array.of()</code>
+</h5><p>将一组参数转换为数组实例</p>
+<h4 id="数组空位">
+<a class="header-anchor" href="#%e6%95%b0%e7%bb%84%e7%a9%ba%e4%bd%8d"></a>
+数组空位：
+</h4><ul>
+<li>使用数组字面量初始化数组时，可以使用一串逗号创建空位
+<ul>
+<li><code>const a = [1,,,,,5];</code></li>
+</ul>
+</li>
+<li><code>map()</code>会跳过空位置</li>
+<li><code>join()</code>会视空位置为空字符串</li>
+</ul>
+<h4 id="数组索引">
+<a class="header-anchor" href="#%e6%95%b0%e7%bb%84%e7%b4%a2%e5%bc%95"></a>
+数组索引：
+</h4><ul>
+<li>用数组索引更新数组时，中间跳过的部分会为 undefined</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">let a = [1];
+</span></span><span class="line"><span class="cl">a[100]=1;
+</span></span><span class="line"><span class="cl">//索引1到99的部分为undefined
+</span></span></code></pre></div><h4 id="检测数组">
+<a class="header-anchor" href="#%e6%a3%80%e6%b5%8b%e6%95%b0%e7%bb%84"></a>
+检测数组：
+</h4><ul>
+<li>假定只有<strong>一个全局执行上下文</strong>：<code>instanceof()</code></li>
+<li>如果<strong>要把数组从一个框架传给另外一个框架，则这个数组的构造函数将有别于在第二个框架内本地创建的数组</strong>：<code>Array.isArray()</code></li>
+</ul>
+<h4 id="迭代器方法">
+<a class="header-anchor" href="#%e8%bf%ad%e4%bb%a3%e5%99%a8%e6%96%b9%e6%b3%95"></a>
+迭代器方法：
+</h4><ul>
+<li><code>keys()</code>：返回数组索引</li>
+<li><code>values()</code>：返回数组元素</li>
+<li><code>entires()</code>：返回索引/值对</li>
+</ul>
+<h4 id="复制和填充方法">
+<a class="header-anchor" href="#%e5%a4%8d%e5%88%b6%e5%92%8c%e5%a1%ab%e5%85%85%e6%96%b9%e6%b3%95"></a>
+复制和填充方法：
+</h4><ul>
+<li><code>fill()</code>
+<ul>
+<li>向一个已有的数组中插入全部或部分相同的值</li>
+<li>参数：<strong>填入数字</strong>（必填）、开始索引（可选）、结束索引（可选）</li>
+<li>索引为负数也就是想象成数组产固定加上它得到的正索引</li>
+<li>静默沪铝超出数组边界、0 长度、方向相仿的索引范围</li>
+</ul>
+</li>
+<li><code>copyWithin()</code>
+<ul>
+<li>按照指定范围复制数组中的部分内容，然后将它插入到指定索引开始的位置</li>
+<li>参数：插入开始位置、开始复制位置、结束复制位置（没有则到末尾）</li>
+<li>索引问题同<code>fill()</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="扩展操作符">
+<a class="header-anchor" href="#%e6%89%a9%e5%b1%95%e6%93%8d%e4%bd%9c%e7%ac%a6"></a>
+扩展操作符：
+</h4><p><code>...</code></p>
+        
+        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Site</a>, last modified on 0001-01-01</p>]]>
+      </description>
+      
+    </item>
+    
+  </channel>
+</rss>
