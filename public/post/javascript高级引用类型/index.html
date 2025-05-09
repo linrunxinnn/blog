@@ -8,7 +8,7 @@
   name="viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit=no"
 /><title>
-  JacaScript-高级引用类型 | linrunxinnn
+  JavaScript-高级引用类型 | linrunxinnn
 </title>
 <meta
   name="description"
@@ -37,7 +37,7 @@
     crossorigin="anonymous"
   /><link rel="stylesheet" href="/css/loader.css" />
 <meta property="og:type" content="website" />
-  <meta property="og:title" content="JacaScript-高级引用类型 | linrunxinnn" />
+  <meta property="og:title" content="JavaScript-高级引用类型 | linrunxinnn" />
   <meta
     property="og:description"
     content="少女祈祷中..."
@@ -128,9 +128,9 @@
       </span><a id="main-nav-toggle" class="nav-icon"></a>
   </nav>
   <nav id="sub-nav"><a id="nav-search-btn" class="nav-icon popup-trigger" title="搜索"></a></nav></div>
-<header id="header"><picture><source media="(max-width: 479px)" srcset="/images/banner-600w.webp"><source media="(max-width: 799px)" srcset="/images/banner-800w.webp"><source media="(min-width: 800px)" srcset="/images/banner.webp"><img  fetchpriority="high" src="/imgs/bizhi.jpg" alt="JacaScript-高级引用类型"></picture><img alt="JacaScript-高级引用类型" style="visibility: hidden;"><div id="header-outer">
+<header id="header"><picture><source media="(max-width: 479px)" srcset="/images/banner-600w.webp"><source media="(max-width: 799px)" srcset="/images/banner-800w.webp"><source media="(min-width: 800px)" srcset="/images/banner.webp"><img  fetchpriority="high" src="/imgs/bizhi.jpg" alt="JavaScript-高级引用类型"></picture><img alt="JavaScript-高级引用类型" style="visibility: hidden;"><div id="header-outer">
     <div id="header-title"><a href="/" id="logo">
-            <h1 data-aos="slide-up">JacaScript-高级引用类型</h1>
+            <h1 data-aos="slide-up">JavaScript-高级引用类型</h1>
           </a><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
   </div>
 </header><div id="content"
@@ -155,6 +155,17 @@
         <li></li>
       </ul>
     </li>
+    <li><a href="#map">Map</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#set">Set</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#弱引用">弱引用</a></li>
   </ul>
 </nav>
   </div>
@@ -278,27 +289,13 @@
 <a class="header-anchor" href="#%e7%9b%ae%e5%bd%95"></a>
 目录
 </h2><ul>
-<li>
-<p>6.1 <strong>Object</strong></p>
-</li>
-<li>
-<p>6.2 <strong>Array</strong></p>
-</li>
-<li>
-<p>6.3 <strong>定型数组</strong></p>
-</li>
-<li>
-<p>6.4 <strong>Map</strong></p>
-</li>
-<li>
-<p>6.5 <strong>Set</strong></p>
-</li>
-<li>
-<p>6.6 <strong>弱引用</strong></p>
-</li>
-<li>
-<p>6.7 <strong>WeakMap/WeakSet</strong></p>
-</li>
+<li>6.1 <strong>Object</strong></li>
+<li>6.2 <strong>Array</strong></li>
+<li>6.3 <strong>定型数组</strong></li>
+<li>6.4 <strong>Map</strong></li>
+<li>6.5 <strong>Set</strong></li>
+<li>6.6 <strong>弱引用</strong></li>
+<li>6.7 <strong>WeakMap/WeakSet</strong></li>
 </ul>
 <h2 id="object">
 <a class="header-anchor" href="#object"></a>
@@ -306,8 +303,8 @@ Object
 </h2><h4 id="创建方式">
 <a class="header-anchor" href="#%e5%88%9b%e5%bb%ba%e6%96%b9%e5%bc%8f"></a>
 创建方式：
-</h4><p><code>new Object()</code></p>
-<p><code>let obj={ }</code></p>
+</h4><p><code>new Object()</code>
+<code>let obj={ }</code></p>
 <h4 id="赋值方式">
 <a class="header-anchor" href="#%e8%b5%8b%e5%80%bc%e6%96%b9%e5%bc%8f"></a>
 赋值方式：
@@ -315,12 +312,8 @@ Object
 <a class="header-anchor" href="#%e5%ad%98%e5%8f%96%e6%96%b9%e5%bc%8f"></a>
 存取方式：
 </h4><ul>
-<li>
-<p>点语法<code>obj.属性</code></p>
-</li>
-<li>
-<p>中括号<code>obj[属性]</code></p>
-</li>
+<li>点语法<code>obj.属性</code></li>
+<li>中括号<code>obj[属性]</code></li>
 </ul>
 <h2 id="array">
 <a class="header-anchor" href="#array"></a>
@@ -328,16 +321,14 @@ Array
 </h2><h4 id="创建方式-1">
 <a class="header-anchor" href="#%e5%88%9b%e5%bb%ba%e6%96%b9%e5%bc%8f-1"></a>
 创建方式：
-</h4><p><code>new Array()</code></p>
-<p><code>Array()</code></p>
-<p><code>let arr=[ ]</code></p>
+</h4><p><code>new Array()</code>
+<code>Array()</code>
+<code>let arr=[ ]</code></p>
 <h5 id="arrayfrom">
 <a class="header-anchor" href="#arrayfrom"></a>
 <code>Array.from()</code>
 </h5><p>将类数组结构转换为数组示例</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Array.from(&#34;Matt&#34;)
-</span></span><span class="line"><span class="cl">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Array.from(&#34;Matt&#34;)
 </span></span><span class="line"><span class="cl">//[&#34;M&#34;,&#34;a&#34;,&#34;t&#34;,&#34;t&#34;]
 </span></span></code></pre></div><h5 id="arrayof">
 <a class="header-anchor" href="#arrayof"></a>
@@ -347,18 +338,13 @@ Array
 <a class="header-anchor" href="#%e6%95%b0%e7%bb%84%e7%a9%ba%e4%bd%8d"></a>
 数组空位：
 </h4><ul>
-<li>
-<p>使用数组字面量初始化数组时，可以使用一串逗号创建空位</p>
+<li>使用数组字面量初始化数组时，可以使用一串逗号创建空位
+<ul>
+<li><code>const a = [1,,,,,5];</code></li>
+</ul>
 </li>
-<li>
-<p><code>const a = [1,,,,,5];</code></p>
-</li>
-<li>
-<p><code>map()</code>会跳过空位置</p>
-</li>
-<li>
-<p><code>join()</code>会视空位置为空字符串</p>
-</li>
+<li><code>map()</code>会跳过空位置</li>
+<li><code>join()</code>会视空位置为空字符串</li>
 </ul>
 <h4 id="数组索引">
 <a class="header-anchor" href="#%e6%95%b0%e7%bb%84%e7%b4%a2%e5%bc%95"></a>
@@ -366,67 +352,42 @@ Array
 </h4><ul>
 <li>用数组索引更新数组时，中间跳过的部分会为 undefined</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">let a = [1];
-</span></span><span class="line"><span class="cl">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">let a = [1];
 </span></span><span class="line"><span class="cl">a[100]=1;
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">//索引1到99的部分为undefined
 </span></span></code></pre></div><h4 id="检测数组">
 <a class="header-anchor" href="#%e6%a3%80%e6%b5%8b%e6%95%b0%e7%bb%84"></a>
 检测数组：
 </h4><ul>
-<li>
-<p>假定只有<strong>一个全局执行上下文</strong>：<code>instanceof()</code></p>
-</li>
-<li>
-<p>如果<strong>要把数组从一个框架传给另外一个框架，则这个数组的构造函数将有别于在第二个框架内本地创建的数组</strong>：<code>Array.isArray()</code></p>
-</li>
+<li>假定只有<strong>一个全局执行上下文</strong>：<code>instanceof()</code></li>
+<li>如果<strong>要把数组从一个框架传给另外一个框架，则这个数组的构造函数将有别于在第二个框架内本地创建的数组</strong>：<code>Array.isArray()</code></li>
 </ul>
 <h4 id="迭代器方法">
 <a class="header-anchor" href="#%e8%bf%ad%e4%bb%a3%e5%99%a8%e6%96%b9%e6%b3%95"></a>
 迭代器方法：
 </h4><ul>
-<li>
-<p><code>keys()</code>：返回数组索引</p>
-</li>
-<li>
-<p><code>values()</code>：返回数组元素</p>
-</li>
-<li>
-<p><code>entires()</code>：返回索引/值对</p>
-</li>
+<li><code>keys()</code>：返回数组索引</li>
+<li><code>values()</code>：返回数组元素</li>
+<li><code>entires()</code>：返回索引/值对</li>
 </ul>
 <h4 id="复制和填充方法">
 <a class="header-anchor" href="#%e5%a4%8d%e5%88%b6%e5%92%8c%e5%a1%ab%e5%85%85%e6%96%b9%e6%b3%95"></a>
 复制和填充方法：
 </h4><ul>
-<li>
-<p><code>fill()</code></p>
+<li><code>fill()</code>
+<ul>
+<li>向一个已有的数组中插入全部或部分相同的值</li>
+<li>参数：<strong>填入数字</strong>（必填）、开始索引（可选）、结束索引（可选）</li>
+<li>索引为负数也就是想象成数组产固定加上它得到的正索引</li>
+<li>静默沪铝超出数组边界、0 长度、方向相仿的索引范围</li>
+</ul>
 </li>
-<li>
-<p>向一个已有的数组中插入全部或部分相同的值</p>
-</li>
-<li>
-<p>参数：<strong>填入数字</strong>（必填）、开始索引（可选）、结束索引（可选）</p>
-</li>
-<li>
-<p>索引为负数也就是想象成数组产固定加上它得到的正索引</p>
-</li>
-<li>
-<p>静默沪铝超出数组边界、0 长度、方向相仿的索引范围</p>
-</li>
-<li>
-<p><code>copyWithin()</code></p>
-</li>
-<li>
-<p>按照指定范围复制数组中的部分内容，然后将它插入到指定索引开始的位置</p>
-</li>
-<li>
-<p>参数：插入开始位置、开始复制位置、结束复制位置（没有则到末尾）</p>
-</li>
-<li>
-<p>索引问题同<code>fill()</code></p>
+<li><code>copyWithin()</code>
+<ul>
+<li>按照指定范围复制数组中的部分内容，然后将它插入到指定索引开始的位置</li>
+<li>参数：插入开始位置、开始复制位置、结束复制位置（没有则到末尾）</li>
+<li>索引问题同<code>fill()</code></li>
+</ul>
 </li>
 </ul>
 <h4 id="扩展操作符">
@@ -434,12 +395,8 @@ Array
 扩展操作符：
 </h4><p><code>...</code></p>
 <ul>
-<li>
-<p>将两个或多个数组合并<code>[...array1,...array2]</code></p>
-</li>
-<li>
-<p>创建数组浅拷贝<code>let copyarr = [...originalArray]</code></p>
-</li>
+<li>将两个或多个数组合并<code>[...array1,...array2]</code></li>
+<li>创建数组浅拷贝<code>let copyarr = [...originalArray]</code></li>
 </ul>
 <h4 id="剩余操作符">
 <a class="header-anchor" href="#%e5%89%a9%e4%bd%99%e6%93%8d%e4%bd%9c%e7%ac%a6"></a>
@@ -451,27 +408,17 @@ Array
 <a class="header-anchor" href="#%e8%bd%ac%e6%8d%a2%e6%96%b9%e6%b3%95"></a>
 转换方法：
 </h4><ul>
-<li>
-<p><code>toLocalString()</code></p>
-</li>
-<li>
-<p><code>toString()</code>：返回数组中每一个值的等效字符串拼接而成的一个逗号分隔的字符串，也就是对数组中每个值都调用其<code>toString()</code>方法</p>
-</li>
-<li>
-<p><code>valueOf()</code>：返回数组本身</p>
-</li>
-<li>
-<p><code>toLocalString()</code>和<code>toString()</code>返回的都是逗号分隔的字符串，可以使用<code>join()</code>方法接收一个字符串分隔符</p>
-</li>
-<li>
-<p>数组中的某一项为 null 和 undefined 时，在<code>join()``toLocalString()``toString()``valueOf()</code>返回的结果会以空字符串存在</p>
-</li>
+<li><code>toLocalString()</code></li>
+<li><code>toString()</code>：返回数组中每一个值的等效字符串拼接而成的一个逗号分隔的字符串，也就是对数组中每个值都调用其<code>toString()</code>方法</li>
+<li><code>valueOf()</code>：返回数组本身</li>
+<li><code>toLocalString()</code>和<code>toString()</code>返回的都是逗号分隔的字符串，可以使用<code>join()</code>方法接收一个字符串分隔符</li>
+<li>数组中的某一项为 null 和 undefined 时，在<code>join()``toLocalString()``toString()``valueOf()</code>返回的结果会以空字符串存在</li>
 </ul>
 <h4 id="栈方法">
 <a class="header-anchor" href="#%e6%a0%88%e6%96%b9%e6%b3%95"></a>
 栈方法：
-</h4><p><code>push()</code>：尾入</p>
-<p><code>pop()</code>：尾出</p>
+</h4><p><code>push()</code>：尾入
+<code>pop()</code>：尾出</p>
 <h4 id="队列方法">
 <a class="header-anchor" href="#%e9%98%9f%e5%88%97%e6%96%b9%e6%b3%95"></a>
 队列方法：
@@ -480,140 +427,102 @@ Array
 <a class="header-anchor" href="#%e5%8f%8d%e8%bd%ac%e5%92%8c%e6%8e%92%e5%ba%8f%e6%96%b9%e6%b3%95"></a>
 反转和排序方法：
 </h4><ul>
-<li>
-<p>反转<code>reverse()</code></p>
+<li>反转<code>reverse()</code></li>
+<li>排序<code>sort()</code>
+<ul>
+<li>会在每一项调用<code>toString()</code>转型函数，然后比较<strong>字符串</strong>比较顺序</li>
+<li>可以接收一个比较函数<code>arr.sort(比较函数)</code></li>
+<li>常见排序模式（141 页）
+<ul>
+<li><code>arr.sort((a,b)=&gt; a-b )</code> 数值升序</li>
+<li><code>arr.sort((a,b)=&gt; b-a )</code> 数值降序</li>
+<li><code>arr.sort((a,b)=&gt; a.localeCompare(b) )</code> 字符串升序</li>
+<li><code>arr.sort((a,b)=&gt; b.localeCompare(a) )</code> 字符串降序</li>
+</ul>
 </li>
-<li>
-<p>排序<code>sort()</code></p>
-</li>
-<li>
-<p>会在每一项调用<code>toString()</code>转型函数，然后比较<strong>字符串</strong>比较顺序</p>
-</li>
-<li>
-<p>可以接收一个比较函数<code>arr.sort(比较函数)</code></p>
-</li>
-<li>
-<p>常见排序模式（141 页）</p>
-</li>
-<li>
-<p><code>arr.sort((a,b)=&gt; a-b )</code> 数值升序</p>
-</li>
-<li>
-<p><code>arr.sort((a,b)=&gt; b-a )</code> 数值降序</p>
-</li>
-<li>
-<p><code>arr.sort((a,b)=&gt; a.localeCompare(b) )</code> 字符串升序</p>
-</li>
-<li>
-<p><code>arr.sort((a,b)=&gt; b.localeCompare(a) )</code> 字符串降序</p>
+</ul>
 </li>
 </ul>
 <h4 id="操作方法">
 <a class="header-anchor" href="#%e6%93%8d%e4%bd%9c%e6%96%b9%e6%b3%95"></a>
 操作方法：
 </h4><ul>
-<li>
-<p><code>concat()</code></p>
+<li><code>concat()</code>
+<ul>
+<li>在现有数组全部元素基础上常见一个新数组，<code>arr.concat(&quot;元素1&quot;,[&quot;元素2&quot;])</code>，这样会吧其中的所有元素都插入到 arr 数组中，且可以<strong>打平数组</strong></li>
+<li>打平数组参数可以重写<code>newArray[Sysbol.isConcatSpreadable] = false</code>，这样可以强制不打平数组</li>
+</ul>
 </li>
-<li>
-<p>在现有数组全部元素基础上常见一个新数组，<code>arr.concat(&quot;元素1&quot;,[&quot;元素2&quot;])</code>，这样会吧其中的所有元素都插入到 arr 数组中，且可以<strong>打平数组</strong></p>
+<li><code>slice()</code>
+<ul>
+<li>创建一个包含原有数组中一个或多个元素的新数组，<code>let new = old.slice(1,3)</code>为将 old 数组中索引 1-3 传入新创建的 new 数组</li>
+<li>参数：返回元素的开始索引、结束索引（没有则返回到末尾）</li>
+</ul>
 </li>
-<li>
-<p>打平数组参数可以重写<code>newArray[Sysbol.isConcatSpreadable] = false</code>，这样可以强制不打平数组</p>
+<li><code>splice()</code>
+<ul>
+<li>删除</li>
+<li>参数：要删除的第一个元素的<strong>位置</strong>、要删除的元素<strong>数量</strong></li>
+</ul>
 </li>
-<li>
-<p><code>slice()</code></p>
-</li>
-<li>
-<p>创建一个包含原有数组中一个或多个元素的新数组，<code>let new = old.slice(1,3)</code>为将 old 数组中索引 1-3 传入新创建的 new 数组</p>
-</li>
-<li>
-<p>参数：返回元素的开始索引、结束索引（没有则返回到末尾）</p>
-</li>
-<li>
-<p><code>splice()</code></p>
-</li>
-<li>
-<p>删除</p>
-</li>
-<li>
-<p>参数：要删除的第一个元素的<strong>位置</strong>、要删除的元素<strong>数量</strong></p>
-</li>
-<li>
-<p><code>splice()</code></p>
-</li>
-<li>
-<p>插入、替换</p>
-</li>
-<li>
-<p>参数：开始位置、要删除的元素数量、要插入的元素（插入的元素可以一直写多个，直接接上就好）</p>
-</li>
-<li>
-<p>返回一个从数组中删除的元素</p>
+<li><code>splice()</code>
+<ul>
+<li>插入、替换</li>
+<li>参数：开始位置、要删除的元素数量、要插入的元素（插入的元素可以一直写多个，直接接上就好）</li>
+<li>返回一个从数组中删除的元素</li>
+</ul>
 </li>
 </ul>
 <h4 id="搜索和位置方法">
 <a class="header-anchor" href="#%e6%90%9c%e7%b4%a2%e5%92%8c%e4%bd%8d%e7%bd%ae%e6%96%b9%e6%b3%95"></a>
 搜索和位置方法：
 </h4><ul>
-<li>
-<p><code>indexOf()</code> <code>lastIndexOf()</code> <code>includes()</code></p>
+<li><code>indexOf()</code> <code>lastIndexOf()</code> <code>includes()</code>
+<ul>
+<li>其中前两个返回的是查找的元素的位置，没有则返回-1；区别：一个从头开始找，一个从末尾开始</li>
+<li>后面的一个返回的是布尔值</li>
+</ul>
 </li>
-<li>
-<p>其中前两个返回的是查找的元素的位置，没有则返回-1；区别：一个从头开始找，一个从末尾开始</p>
+<li><code>find()</code> <code>findIndex()</code>
+<ul>
+<li>允许使用断言函数搜索数组
+<ul>
+<li>参数：元素、索引、数组本身</li>
+</ul>
 </li>
-<li>
-<p>后面的一个返回的是布尔值</p>
-</li>
-<li>
-<p><code>find()</code> <code>findIndex()</code></p>
-</li>
-<li>
-<p>允许使用断言函数搜索数组</p>
-</li>
-<li>
-<p>参数：元素、索引、数组本身</p>
+</ul>
 </li>
 </ul>
 <h4 id="迭代方法">
 <a class="header-anchor" href="#%e8%bf%ad%e4%bb%a3%e6%96%b9%e6%b3%95"></a>
 迭代方法：
 </h4><ul>
-<li>
-<p><code>every()</code></p>
+<li><code>every()</code>
+<ul>
+<li>如果每一项都返回 true，才返回 true</li>
+</ul>
 </li>
-<li>
-<p>如果每一项都返回 true，才返回 true</p>
+<li><code>some()</code>
+<ul>
+<li>如果有一项返回 true，则返回 true</li>
+</ul>
 </li>
-<li>
-<p><code>some()</code></p>
+<li><code>filter()</code>
+<ul>
+<li>返回 true 的向会<strong>组成数组之后返回</strong></li>
+<li>适合用于查询数组中符合条件的<strong>所有元素</strong></li>
+</ul>
 </li>
-<li>
-<p>如果有一项返回 true，则返回 true</p>
+<li><code>forEach()</code>
+<ul>
+<li>没有返回值</li>
+</ul>
 </li>
-<li>
-<p><code>filter()</code></p>
-</li>
-<li>
-<p>返回 true 的向会<strong>组成数组之后返回</strong></p>
-</li>
-<li>
-<p>适合用于查询数组中符合条件的<strong>所有元素</strong></p>
-</li>
-<li>
-<p><code>forEach()</code></p>
-</li>
-<li>
-<p>没有返回值</p>
-</li>
-<li>
-<p><code>map()</code></p>
-</li>
-<li>
-<p><strong>返回由每一次函数调用的结果构成的数组</strong></p>
-</li>
-<li>
-<p>适合用于创建与原数组<strong>一一对应</strong>的<strong>新数组</strong></p>
+<li><code>map()</code>
+<ul>
+<li><strong>返回由每一次函数调用的结果构成的数组</strong></li>
+<li>适合用于创建与原数组<strong>一一对应</strong>的<strong>新数组</strong></li>
+</ul>
 </li>
 </ul>
 <h4 id="归并方法">
@@ -628,20 +537,99 @@ Array
 展开方法：
 </h4><p><code>flat()</code> <code>flatMap()</code></p>
 <ul>
-<li>
-<p><code>flat()</code>支持接收一个深度参数（默认为 1），并返回一个将数组实例展开到指定深度的浅拷贝</p>
-</li>
-<li>
-<p><code>flatMap()</code>会先在展开数组前执行映射，其他无区别，只是提高效率，因为浏览器只执行一次遍历</p>
-</li>
-<li>
-<p><code>flatMap()</code>适合处理非数组对象的方法（如<code>split()</code>）返回的数组</p>
-</li>
+<li><code>flat()</code>支持接收一个深度参数（默认为 1），并返回一个将数组实例展开到指定深度的浅拷贝</li>
+<li><code>flatMap()</code>会先在展开数组前执行映射，其他无区别，只是提高效率，因为浏览器只执行一次遍历</li>
+<li><code>flatMap()</code>适合处理非数组对象的方法（如<code>split()</code>）返回的数组</li>
 </ul>
+<h2 id="map">
+<a class="header-anchor" href="#map"></a>
+Map
+</h2><h4 id="创建方式-2">
+<a class="header-anchor" href="#%e5%88%9b%e5%bb%ba%e6%96%b9%e5%bc%8f-2"></a>
+创建方式：
+</h4><ul>
+<li><code>new Map()</code></li>
+<li>使用自定义迭代对象初始化映射</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">const</span> <span class="n">m</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Map</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="p">[</span><span class="n">Symbol</span><span class="o">.</span><span class="n">iterator</span><span class="p">]:</span><span class="n">function</span><span class="c1">#(){</span>
+</span></span><span class="line"><span class="cl">			<span class="nb">yield</span> <span class="p">[</span><span class="s2">&#34;key1&#34;</span><span class="p">,</span><span class="s2">&#34;val1&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><code>set()</code>添加键值对</li>
+<li>Map 可以使用 JS 任何数据类型作为键</li>
+</ul>
+<h4 id="顺序与迭代">
+<a class="header-anchor" href="#%e9%a1%ba%e5%ba%8f%e4%b8%8e%e8%bf%ad%e4%bb%a3"></a>
+顺序与迭代：
+</h4><ul>
+<li>Map 实例会维护键值对的插入顺序，因此可以通过根据插入顺序进行迭代操作</li>
+<li>map 提供一个迭代器<strong>可以通过<code>entries()</code>和<code>Symbol.iterator</code>属性获得</strong></li>
+</ul>
+<h4 id="map-和-object">
+<a class="header-anchor" href="#map-%e5%92%8c-object"></a>
+Map 和 Object：
+</h4><ul>
+<li>删除性能：对大多数引擎来书，Map 的删除操作都会更快</li>
+</ul>
+<h4 id="插入迭代">
+<a class="header-anchor" href="#%e6%8f%92%e5%85%a5%e8%bf%ad%e4%bb%a3"></a>
+<strong>插入：迭代</strong>
+</h4><h5 id="迭代协议">
+<a class="header-anchor" href="#%e8%bf%ad%e4%bb%a3%e5%8d%8f%e8%ae%ae"></a>
+迭代协议：
+</h5><p>JS 中，任何实现了<code>[Symbol.iterator]()</code>方法的对象都是可迭代的，当对象被用于<code>for...of</code>或者扩展操作符是，JS 会自动调用这个方法
+可以通过实现<code>[Symbol.iterator]()</code>使对象可迭代</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">const</span> <span class="n">obj</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="o">...</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">[</span><span class="n">Symbol</span><span class="o">.</span><span class="n">iterator</span><span class="p">](){</span>
+</span></span><span class="line"><span class="cl">		<span class="n">let</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">const</span> <span class="n">keys</span> <span class="o">=</span> <span class="ne">Object</span><span class="o">.</span><span class="n">keys</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">next</span><span class="p">:()</span><span class="o">=&gt;</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">value</span><span class="p">:</span><span class="n">this</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="n">index</span><span class="p">]];</span>
+</span></span><span class="line"><span class="cl">				<span class="n">done</span><span class="p">:</span><span class="n">index</span><span class="o">&gt;</span><span class="n">keys</span><span class="o">.</span><span class="n">length</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h5 id="扩展操作符原理">
+<a class="header-anchor" href="#%e6%89%a9%e5%b1%95%e6%93%8d%e4%bd%9c%e7%ac%a6%e5%8e%9f%e7%90%86"></a>
+扩展操作符原理：
+</h5><ul>
+<li>检查对象是否实现了<code>[Symbol.iterator]()</code></li>
+<li>如果实现了则调用该方法获取迭代器</li>
+<li>依次从迭代器中取出值并展开</li>
+</ul>
+<h2 id="set">
+<a class="header-anchor" href="#set"></a>
+Set
+</h2><h4 id="创建方式-3">
+<a class="header-anchor" href="#%e5%88%9b%e5%bb%ba%e6%96%b9%e5%bc%8f-3"></a>
+创建方式：
+</h4><ul>
+<li><code>new Set()</code></li>
+<li>使用自定义迭代对象初始化</li>
+<li><code>add()</code>增加值；<code>has()</code>查询；<code>size()</code>获取数量；<code>delete()</code>和<code>clear()</code>删除元素</li>
+<li>自动去重</li>
+</ul>
+<h4 id="顺序与迭代-1">
+<a class="header-anchor" href="#%e9%a1%ba%e5%ba%8f%e4%b8%8e%e8%bf%ad%e4%bb%a3-1"></a>
+顺序与迭代：
+</h4><ul>
+<li>set 提供了一个能够以插入顺序生成集合内容的迭代器，**通过<code>values()</code>方法及其别名方法<code>keys()</code>或者<code>[Symbol.iterator]()</code>**取得</li>
+</ul>
+<h2 id="弱引用">
+<a class="header-anchor" href="#%e5%bc%b1%e5%bc%95%e7%94%a8"></a>
+弱引用
+</h2><p><strong>希望保持对某个对象的引用，但是又不阻止它被当作垃圾回收</strong></p>
 </div>
-    <footer class="article-footer"><div class="share-wrapper"><a href="https://connect.qq.com/widget/shareqq/index.html?url=http://localhost:1313/post/javascript%E9%AB%98%E7%BA%A7%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/&amp;title=JacaScript-%e9%ab%98%e7%ba%a7%e5%bc%95%e7%94%a8%e7%b1%bb%e5%9e%8b&amp;desc=%0d%e7%9b%ae%e5%bd%95%0d6.1%20Object%0a6.2%20Array%0a6.3%20%e5%ae%9a%e5%9e%8b%e6%95%b0%e7%bb%84%0a6.4%20Map%0a6.5%20Set%0a6.6%20%e5%bc%b1%e5%bc%95%e7%94%a8%0a6.7%20WeakMap/WeakSet%0aObject%0d%e5%88%9b%e5%bb%ba%e6%96%b9%e5%bc%8f%ef%bc%9a%0dnew%20Object%28%29%0alet%20obj=%7b%20%7d%0a%e8%b5%8b%e5%80%bc%e6%96%b9%e5%bc%8f%ef%bc%9a%0d%e5%ad%98%e5%8f%96%e6%96%b9%e5%bc%8f%ef%bc%9a%0d%e7%82%b9%e8%af%ad%e6%b3%95obj.%e5%b1%9e%e6%80%a7%0a%e4%b8%ad%e6%8b%ac%e5%8f%b7obj[%e5%b1%9e%e6%80%a7]%0aArray%0d%e5%88%9b%e5%bb%ba%e6%96%b9%e5%bc%8f%ef%bc%9a%0dnew%20Array%28%29%0a&amp;source=http://localhost:1313/" target="_blank" rel="noopener noreferrer" title="JacaScript-高级引用类型">
+    <footer class="article-footer"><div class="share-wrapper"><a href="https://connect.qq.com/widget/shareqq/index.html?url=http://localhost:1313/post/javascript%E9%AB%98%E7%BA%A7%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/&amp;title=JavaScript-%e9%ab%98%e7%ba%a7%e5%bc%95%e7%94%a8%e7%b1%bb%e5%9e%8b&amp;desc=%0d%e7%9b%ae%e5%bd%95%0d6.1%20Object%206.2%20Array%206.3%20%e5%ae%9a%e5%9e%8b%e6%95%b0%e7%bb%84%206.4%20Map%206.5%20Set%206.6%20%e5%bc%b1%e5%bc%95%e7%94%a8%206.7%20WeakMap/WeakSet%20Object%0d%e5%88%9b%e5%bb%ba%e6%96%b9%e5%bc%8f%ef%bc%9a%0dnew%20Object%28%29%20let%20obj=%7b%20%7d%0a%e8%b5%8b%e5%80%bc%e6%96%b9%e5%bc%8f%ef%bc%9a%0d%e5%ad%98%e5%8f%96%e6%96%b9%e5%bc%8f%ef%bc%9a%0d%e7%82%b9%e8%af%ad%e6%b3%95obj.%e5%b1%9e%e6%80%a7%20%e4%b8%ad%e6%8b%ac%e5%8f%b7obj[%e5%b1%9e%e6%80%a7]%20Array%0d%e5%88%9b%e5%bb%ba%e6%96%b9%e5%bc%8f%ef%bc%9a%0dnew%20Array%28%29%20Array%28%29%20let%20arr=[%20]%0a&amp;source=http://localhost:1313/" target="_blank" rel="noopener noreferrer" title="JavaScript-高级引用类型">
       <div class="share-icon icon icon-qq"></div>
-    </a><a href="javascript:;"  title="JacaScript-高级引用类型">
+    </a><a href="javascript:;"  title="JavaScript-高级引用类型">
       <div class="share-icon icon icon-weixin"><div id="share-weixin">
             <div class="share-weixin-dom">
               <div class="share-weixin-content">
@@ -701,10 +689,10 @@ Array
       linrunxinnn
     </div><div>
         <span class="icon-brush"
-          >&nbsp;1.8k</span
+          >&nbsp;2.4k</span
         >
         &nbsp;|&nbsp;
-        <span class="icon-coffee">&nbsp;00:04</span>
+        <span class="icon-coffee">&nbsp;00:05</span>
       </div><div class="footer-beian">
         <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn"
           >粤ICP备2025379501号</a
@@ -746,6 +734,17 @@ Array
         <li></li>
       </ul>
     </li>
+    <li><a href="#map">Map</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#set">Set</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#弱引用">弱引用</a></li>
   </ul>
 </nav>
   </div>
@@ -905,9 +904,9 @@ Array
   <div><script data-pjax>
         window.REIMU_POST = {
           author: "linrunxinnn",
-          title: "JacaScript-高级引用类型",
+          title: "JavaScript-高级引用类型",
           url: "http:\/\/localhost:1313\/post\/javascript%E9%AB%98%E7%BA%A7%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B\/",
-          description: "\r目录\r6.1 Object\n6.2 Array\n6.3 定型数组\n6.4 Map\n6.5 Set\n6.6 弱引用\n6.7 WeakMap\/WeakSet\nObject\r创建方式：\rnew Object()\nlet obj={ }\n赋值方式：\r存取方式：\r点语法obj.属性\n中括号obj[属性]\nArray\r创建方式：\rnew Array()\n",
+          description: "\r目录\r6.1 Object 6.2 Array 6.3 定型数组 6.4 Map 6.5 Set 6.6 弱引用 6.7 WeakMap\/WeakSet Object\r创建方式：\rnew Object() let obj={ }\n赋值方式：\r存取方式：\r点语法obj.属性 中括号obj[属性] Array\r创建方式：\rnew Array() Array() let arr=[ ]\n",
           cover: "http:\/\/localhost:1313\/imgs\/bizhi.jpg",
         };
       </script><script src="/js/insert_highlight.js" data-pjax></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const pswp = () => {
