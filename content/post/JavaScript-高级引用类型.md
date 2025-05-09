@@ -4,6 +4,8 @@ title: JacaScript-高级引用类型
 tags:
   - JavaScript
 
+series: "JavaScript"
+
 dir:
   - 6.1 **Object**- 6.2 **Array**- 6.3 **定型数组**- 6.4 **Map**- 6.5 **Set**- 6.6 **弱引用**-67**WeakMapWeakSet**
 ---
